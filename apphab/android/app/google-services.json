@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "65760230973",
+    "project_id": "apphab-ecb58",
+    "storage_bucket": "apphab-ecb58.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:65760230973:android:871eb6428e2c472a057454",
+        "android_client_info": {
+          "package_name": "com.example.apphab"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXVRtQYQb5lk9ju8L3-n16QaNHHQLm1zU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
