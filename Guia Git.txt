@@ -1,0 +1,11 @@
+Para hacer un Pull tener en cuenta lo siguiente:
+Paso 1 Antes de comenzar a hacer algun cambio al codigo:**git branch -M main** Regresar a la rama main donde esta todo unificado
+Paso 2 Hacer un pull para poner al dia el codigo: **git pull origin main** Traer los cambios mas recientes
+Paso 3 Crear una nueva rama: **git branch -M nombrerama** Crea y se mueve a una nueva rama con el nombre de lo que se hara 
+/// AHORA YA PUEDES HACER LOS CAMBIOS EN EL CODIGO////
+Paso 4 Comprobar Estado : **git status** Verificar que los archivos modificados correspondan a lo que si se realizo cambios
+Paso 5 Agregar base de cambios : **git add .** Agrega todos los archivos modificados para tenerlos preparados
+Paso 6 Hacer un Commit: **git commit -m "Detalles del commit"** introduce un mensaje descriptivo pero corto
+Paso 7 Comprobar ultimos cambios: **git pull origin main** Por si haya algun cambio de ultimo momento en lo que estabas modificando el codigo
+Paso 8 Subir el Push: **git push -u origin nombrerama** Sube los cambios a una rama del mismo nombre en el repositorio
+Paso 9 Algun encargado debera hacer el Merge para que el codigo de la rama se una a la base main  
