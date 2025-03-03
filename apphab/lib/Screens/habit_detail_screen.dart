@@ -183,7 +183,7 @@ class _HabitDetailScreenState extends State<HabitDetailScreen> {
                 ),
               ),
               Wrap(
-                spacing: 8.0,
+                spacing: 20.0,
                 children: List.generate(7, (index) {
                   return FilterChip(
                     label: Text(dayLabels[index]),

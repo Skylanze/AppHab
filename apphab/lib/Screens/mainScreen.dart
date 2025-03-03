@@ -18,6 +18,7 @@ class MainScreen extends StatelessWidget {
             return const Center(child: CircularProgressIndicator());
           } else if (state is HabitLoaded) {
             final List<Habit> habits = state.habits;
+
             if (habits.isEmpty) {
               return const Center(
                   child: Text("No hay hábitos. Agrega uno nuevo."));
