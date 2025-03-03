@@ -2,6 +2,7 @@ import 'package:apphab/Blocs/habit_bloc.dart';
 import 'package:apphab/Models/habit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:intl/intl.dart';
 
 class AddHabitScreen extends StatefulWidget {
   const AddHabitScreen({Key? key}) : super(key: key);
@@ -37,11 +38,16 @@ class _AddHabitScreenState extends State<AddHabitScreen> {
   /// Crea el objeto Habit y lanza el evento AddHabit.
   void _onSubmit() {
     if (_formKey.currentState!.validate()) {
+      // Generar una cadena de fecha/hora para garantizar unicidad (yyyyMMddHHmmss)
+      final dateString = DateFormat('yyyyMMddHHmmss').format(DateTime.now());
+
+      // Combinar el título con la fecha para formar el ID
+      final customId = '${_titleController.text.trim()}___$dateString';
+
       final reminderTime = _formatTime(_selectedTime);
 
       final newHabit = Habit(
-        id: _titleController.text
-            .trim(), // Se genera automáticamente en Firestore
+        id: customId, // Usar el ID personalizado
         title: _titleController.text.trim(),
         isActive: _isActive,
         description: _descriptionController.text.trim(),
@@ -50,8 +56,9 @@ class _AddHabitScreenState extends State<AddHabitScreen> {
         completionRate: _completionRate,
       );
 
+      // Disparar el evento en el Bloc
       context.read<HabitBloc>().add(AddHabit(newHabit));
-      Navigator.pop(context); // Vuelve a la pantalla anterior
+      Navigator.pop(context);
     }
   }
 
@@ -131,7 +138,7 @@ class _AddHabitScreenState extends State<AddHabitScreen> {
                 ),
               ),
               Wrap(
-                spacing: 8.0,
+                spacing: 20.0,
                 children: List.generate(7, (index) {
                   return FilterChip(
                     label: Text(dayLabels[index]),

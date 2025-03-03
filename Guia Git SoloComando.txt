@@ -1,0 +1,13 @@
+
+ 1 **git branch -M main** 
+ 2 **git pull origin main** 
+ 3  **git branch -M nombrerama** 
+
+/// AHORA YA PUEDES HACER LOS CAMBIOS EN EL CODIGO////
+
+ 4  **git status** 
+ 5 **git add .** 
+ 6  **git commit -m "Detalles del commit"** 
+ 7 **git pull origin main** 
+ 8 **git push -u origin nombrerama** 
+ 9 Algun encargado debera hacer el Merge para que el codigo de la rama se una a la base main  

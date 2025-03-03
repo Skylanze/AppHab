@@ -1,8 +1,8 @@
 import 'package:apphab/Blocs/habit_bloc.dart';
+import 'package:apphab/Screens/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:apphab/screens/mainScreen.dart';
 import 'package:apphab/firebase_options.dart';
 
 void main() async {
@@ -26,7 +26,8 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: const MainScreen(), // Redirigir a la pantalla principal
+        //home: const MainScreen(),
+        home: const LoginScreen(), // Redirigir a la pantalla principal
       ),
     );
   }
